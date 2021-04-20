@@ -1,0 +1,38 @@
+.row {
+  margin-left: 15px;
+}
+
+.row__posters {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.row__poster::-webkit-scrollbar {
+  display: none;
+  /* keeps the functionality of scroll
+  but don't show the scroll bar. */
+}
+
+.row__poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 100px;
+  transition: transform 500ms;
+  margin-right: 10px;
+}
+
+/* to zoom in when hovered */
+.row__poster:hover {
+  transform: scale(1.05);
+}
+
+.row__posterLarge {
+  object-fit: contain;
+  width: 100%;
+  max-height: 300px;
+}
+
+.row__poster:hover {
+  transform: scale(1.09);
+}
