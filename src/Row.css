@@ -24,7 +24,7 @@
 
 /* to zoom in when hovered */
 .row__poster:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .row__posterLarge {
@@ -34,5 +34,5 @@
 }
 
 .row__poster:hover {
-  transform: scale(1.09);
+  transform: scale(1.1);
 }
