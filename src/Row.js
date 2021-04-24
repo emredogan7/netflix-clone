@@ -10,11 +10,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerURL, setTrailerURL] = useState("");
 
-  // when this component loads, do some stuff, run sth.
-  // for our case, fetch api!
   useEffect(() => {
-    // [], run once when the row loads. don't run again
-    // if [movies], it will be run each time movies changes.
     async function fetchData() {
       const request = await axios.get(fetchUrl);
       setMovies(request.data.results);
@@ -22,10 +18,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
     }
     fetchData();
   }, [fetchUrl]);
-  // why [fetchUrl] => dependency.
-  // everytime this changes, we need to update useEffect()
 
-  // console.log(movies);
   const youtubeOptions = {
     height: "300",
     width: "100%",
@@ -39,7 +32,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
       console.log(movie);
       movieTrailer(movie?.original_title || movie?.name || "")
         .then((url) => {
-          // console.log(url);
           const urlParams = new URLSearchParams(new URL(url).search);
           setTrailerURL(urlParams.get("v"));
         })
@@ -50,7 +42,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
     <div className="row">
       <h2> {title} </h2>
       <div className="row__posters">
-        {/* many film posters here! */}
         {movies.map((movie) => (
           <img
             key={movie.id}
@@ -63,11 +54,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
           ></img>
         ))}
       </div>
-      {/* <Youtube videoId={"ADQFNBZwEPo"} opts={youtubeOptions} /> */}
       {trailerURL && <Youtube videoId={trailerURL} opts={youtubeOptions} />}
-
-      {/* title */}
-      {/* posters of movies */}
     </div>
   );
 }

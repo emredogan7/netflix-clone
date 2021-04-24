@@ -8,7 +8,6 @@ import requests from "./requests";
 function App() {
   return (
     <div className="app">
-      {/* Nav */}
       <Nav />
       <Banner />
       <Row
