@@ -6,6 +6,9 @@
   justify-content: space-between;
   padding: 20px;
   z-index: 1;
+
+  transition-timing-function: ease-in;
+  transition: all 1.5s;
 }
 
 .nav__logo {
@@ -24,4 +27,5 @@
 
 .nav__black {
   background-color: #111;
+  height: 22px;
 }

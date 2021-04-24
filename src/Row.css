@@ -1,11 +1,14 @@
 .row {
+  color: whitesmoke;
   margin-left: 15px;
+  margin-top: 10px;
 }
 
 .row__posters {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
+  padding: 20px;
 }
 
 .row__poster::-webkit-scrollbar {
@@ -17,8 +20,8 @@
 .row__poster {
   object-fit: contain;
   width: 100%;
-  max-height: 100px;
-  transition: transform 500ms;
+  max-height: 110px;
+  transition: transform 450ms;
   margin-right: 10px;
 }
 
@@ -33,6 +36,6 @@
   max-height: 300px;
 }
 
-.row__poster:hover {
+.row__posterLarge:hover {
   transform: scale(1.1);
 }
