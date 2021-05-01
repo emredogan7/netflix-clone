@@ -11,7 +11,7 @@
   padding: 20px;
 }
 
-.row__poster::-webkit-scrollbar {
+.row__posters::-webkit-scrollbar {
   display: none;
   /* keeps the functionality of scroll
   but don't show the scroll bar. */
